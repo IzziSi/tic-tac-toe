@@ -1,0 +1,118 @@
+/* Main styling */
+body {
+	background-image: url("../images/map.jpg");
+	width: 100%;
+	text-align: center;
+	font-family: sans-serif;
+}
+
+h2 {
+	font-size:70px;
+	color: #2F3031;
+	margin-bottom: 70px;
+}
+
+.logo {
+	margin: 0 auto;
+}
+
+.potter {
+	width: 80%;
+	margin-top: 60px;
+}
+
+.borders {
+	width: 250px;
+	height: 250px;
+	border: 8px solid #2F3031;
+	margin: 10px;
+	border-radius: 10px;
+	display: inline-block;
+}
+
+.game-board {
+	margin: 0 auto;
+	position: relative;
+	text-align:center;
+	width: 90%;
+}
+
+#reset-btn {
+	background-color: #2F3031;
+	padding: 40px;
+	width: 87%;
+	color: #fff;
+	font-size: 35px;
+	line-height: 55px;
+	margin-top: 50px;
+}
+
+.mischief {
+	font-size: 45px;
+}
+
+/* Media Queries */
+@media (min-device-width: 768px){
+	.potter {
+		width: 70%;
+		margin-top: 20px;
+	}	
+
+	.borders {
+		width: 200px;
+		height: 200px;
+		border: 6px solid #2F3031;
+	}
+
+	h2 {
+		font-size:60px;
+		color: #2F3031;
+		margin-bottom: 30px;
+	}
+
+	.reset-btn {
+		padding: 25px;
+		width: 70%;
+		color: #fff;
+		font-size: 25px;
+		margin-top: 30px;
+		line-height: 35px;
+	}
+
+	.mischief {
+		font-size: 35px;
+	}
+}
+
+@media (min-device-width: 1046px){
+	.potter {
+		width: 28%;
+		margin-top: 10px;
+	}	
+	h2 {
+		font-size:30px;
+		color: #2F3031;
+		margin-bottom: 15px;
+	}
+	.game-board {
+		width: 35%;
+	}
+	.borders {
+		width: 105px;
+		height: 105px;
+		border: 3px solid #2F3031;
+		margin: 3px;
+	}
+	.reset-btn {
+		padding: 15px;
+		width: 28%;
+		color: #fff;
+		font-size: 15px;
+		margin-top: 15px;
+		line-height: 20px;
+	}
+
+	.mischief {
+		font-size: 20px;
+	}
+}
