@@ -21,6 +21,7 @@ h2 {
 	margin-top: 60px;
 }
 
+
 .borders {
 	width: 250px;
 	height: 250px;
@@ -28,6 +29,8 @@ h2 {
 	margin: 10px;
 	border-radius: 10px;
 	display: inline-block;
+	position:relative;
+	overflow: hidden;
 }
 
 .game-board {
@@ -51,6 +54,16 @@ h2 {
 	font-size: 45px;
 }
 
+.gryffindor {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.slytherin {
+	max-width: 100%;
+	max-height: 100%;
+}
+
 /* Media Queries */
 @media (min-device-width: 768px){
 	.potter {
@@ -70,7 +83,7 @@ h2 {
 		margin-bottom: 30px;
 	}
 
-	.reset-btn {
+	#reset-btn {
 		padding: 25px;
 		width: 70%;
 		color: #fff;
@@ -103,7 +116,7 @@ h2 {
 		border: 3px solid #2F3031;
 		margin: 3px;
 	}
-	.reset-btn {
+	#reset-btn {
 		padding: 15px;
 		width: 28%;
 		color: #fff;
