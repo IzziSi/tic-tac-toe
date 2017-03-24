@@ -4,6 +4,13 @@ body {
 	width: 100%;
 	text-align: center;
 	font-family: sans-serif;
+	opacity: 1;
+	transition: 2s opacity;
+}
+
+body.fade-out {
+	opacity: 0;
+	transition:none;
 }
 
 h2 {
@@ -12,16 +19,34 @@ h2 {
 	margin-bottom: 70px;
 }
 
+.button {
+	background-color: #2F3031;
+    padding: 40px;
+    width: 87%;
+    color: #fff;
+    font-size: 35px;
+    line-height: 55px;
+    margin-top: 50px;
+}
+
+
+
+/*Index.html styling */
+.header {
+	margin-top: 50px;
+}
+
 .logo {
+	max-width: 100%;
+	max-height:100%;
 	margin: 0 auto;
+	-webkit-animation: fadein 5s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 5s; /* Firefox < 16 */
+    -ms-animation: fadein 5s; /* Internet Explorer */
+    -o-animation: fadein 5s; /* Opera < 12.1 */
+    animation: fadein 5s;
+
 }
-
-.potter {
-	width: 80%;
-	margin-top: 60px;
-}
-
-
 .borders {
 	width: 250px;
 	height: 250px;
@@ -40,15 +65,6 @@ h2 {
 	width: 90%;
 }
 
-#reset-btn {
-	background-color: #2F3031;
-	padding: 40px;
-	width: 87%;
-	color: #fff;
-	font-size: 35px;
-	line-height: 55px;
-	margin-top: 50px;
-}
 
 .mischief {
 	font-size: 45px;
@@ -64,12 +80,128 @@ h2 {
 	max-height: 100%;
 }
 
+/*Landing.html styling*/
+#swear {
+	margin-top:500px;
+	-webkit-animation: fadeIn 5s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadeIn 5s; /* Firefox < 16 */
+    -ms-animation: fadeIn 5s; /* Internet Explorer */
+    -o-animation: fadeIn 5s; /* Opera < 12.1 */
+    animation: fadeIn 5s;
+}
+
+#play-btn {
+	width: 70%;
+	display:none;
+	
+}
+
+/*Footsteps */
+/*#footstep-wrapper {
+	position: absolute;
+  	left: 0;
+  	right: 0;
+  	top:0;
+  	margin: 0 auto;
+  	height: 100%;
+  	width: 100%;
+  	z-index: -1;
+}
+
+.leftfoot {
+	position: relative;
+	top:78px;
+	right:196px;
+	-webkit-animation: one 22s infinite;
+  	-moz-animation: one 22s infinite;
+  	-ms-animation: one 22s infinite;
+  	-o-animation: one 22s infinite;
+  	animation: one 22s infinite;
+  	opacity: 0;
+	
+}
+
+.rightfoot {
+	position: relative;
+	top:-26px;
+	right:17px;
+  -webkit-animation: one 22s infinite;
+  -moz-animation: one 22s infinite;
+  -ms-animation: one 22s infinite;
+  -o-animation: one 22s infinite;
+  animation: one 22s infinite;
+  -webkit-animation-delay: .7s;
+  -moz-animation-delay: .7s;
+  -ms-animation-delay: .7s;
+  -o-animation-delay: .7s;
+  animation-delay: .7s;
+  opacity: 0;
+}*/
+
+/* Animations */
+.scene_element {
+    animation-duration: 0.25s;
+    transition-timing-function: ease-in;
+    animation-fill-mode: both;
+
+  }
+  /** An element that fades in */
+  .scene_element--fadein {
+    animation-name: fadeIn;
+  }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+@keyframes one {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  65% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 /* Media Queries */
 @media (min-device-width: 768px){
+	
+	.header {
+		margin-top: 0;
+	}
+
 	.potter {
 		width: 70%;
 		margin-top: 20px;
-	}	
+	}
+
+	#play-btn {
+	width: 50%;
+}
+
+	#swear {
+	margin-top:400px;
+	}
 
 	.borders {
 		width: 200px;
@@ -80,10 +212,10 @@ h2 {
 	h2 {
 		font-size:60px;
 		color: #2F3031;
-		margin-bottom: 30px;
+		margin-bottom: 10px;
 	}
 
-	#reset-btn {
+	.button {
 		padding: 25px;
 		width: 70%;
 		color: #fff;
@@ -99,24 +231,35 @@ h2 {
 
 @media (min-device-width: 1046px){
 	.potter {
-		width: 28%;
+		width: 30%;
 		margin-top: 10px;
 	}	
 	h2 {
 		font-size:30px;
 		color: #2F3031;
-		margin-bottom: 15px;
+		margin-bottom: 10px;
 	}
+
+	#swear {
+	margin-top:150px;
+	}	
+
+	#play-btn {
+	width: 30%;
+}
+
 	.game-board {
 		width: 35%;
+		
 	}
+
 	.borders {
 		width: 105px;
 		height: 105px;
 		border: 3px solid #2F3031;
 		margin: 3px;
 	}
-	#reset-btn {
+	.button{
 		padding: 15px;
 		width: 28%;
 		color: #fff;

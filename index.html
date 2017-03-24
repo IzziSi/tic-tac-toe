@@ -14,8 +14,9 @@
 		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
+	<script>document.body.className += ' fade-out';</script>
 		<div id="container">
-			<header>
+			<header class="header">
 				<div class="logo"><img class="potter" src="images/harry-potter-logo.png"></div>
 				<h2>Tic-Tac-Toe</h2>
 			</header>
@@ -30,10 +31,10 @@
 				<div id="box8" class="borders"></div>
 				<div id="box9" class="borders"></div>
 			</div>
+
 			<div class="reset">
-				<button type="button" id="reset-btn" value="reset"><span class="mischief">Mischief Managed</span><br>"reset game"</button>
+				<button type="button" class="button" id="reset-btn" value="reset"><span class="mischief">Mischief Managed</span><br>"reset game"</button>
 			</div>
-			
 		</div><!-- #container -->
 		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 		<script src="scripts/game.js"></script>
