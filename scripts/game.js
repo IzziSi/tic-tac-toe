@@ -1,9 +1,11 @@
+
 $(document).ready(function () {
+	document.body.className += ' fade-out';
 	console.log("jQuery ready for action!");
 	var currentPlayer = "x";
 	setTimeout(function() {
 		$('#play-btn').fadeIn(3000);
-	}, 3000);
+	}, 2000);
 	$('.game-board').on('click', '.borders', function() {
 		/*If the current player equals x, on the click of the
 		.borders class the background will change to purple and
@@ -13,7 +15,8 @@ $(document).ready(function () {
 			gryffindor.addClass('gryffindor');
 			$(this).unbind("click");
 			if (checkWins('gryffindor')) {
-				alert("Gryffindor wins");
+				$('.win-gryffindor').addClass('on');
+				console.log("gfyffindor wins");
 			} else {
 				currentPlayer = "o";	
 			}
@@ -23,15 +26,15 @@ $(document).ready(function () {
 			slytherin.addClass('slytherin');
 			$(this).unbind("click");
 			if (checkWins('slytherin')) {
-				alert("Slytherin wins!");
+				$('.win-slytherin').addClass('on');
+				console.log("slytherin wins!");
 			} else {
 				currentPlayer = "x";
 			}
-			
+
 		}	
 
 		$('#reset-btn').click(function(reset) {
-			$('.gryffindor img').hide();
 			location.reload(true);
 		});
 	});
@@ -55,7 +58,7 @@ function checkWins(symbol) {
 		return true;
 	} else if ($('#box3').hasClass(symbol) && $('#box5').hasClass(symbol) && $('#box7').hasClass(symbol)) {
 		return true;
-	} else {
+	}  else {
 
 	}
 }

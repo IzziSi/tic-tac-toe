@@ -80,6 +80,34 @@ h2 {
 	max-height: 100%;
 }
 
+.win-slytherin {
+	position: absolute;
+	z-index: 1;
+	left: 80px;
+	top: 800px;
+	display: none;
+	opacity: 0;
+	animation: fadeIn 3s;
+}
+.win-gryffindor {
+	position: absolute;
+	z-index: 1;
+	left: 80px;
+	top: 900px;
+	display: none;
+	opacity: 0;
+	animation: fadeIn 3s;
+}
+
+.on {
+	display: block;
+	opacity: 1;
+	top:700px;
+
+}
+
+
+
 /*Landing.html styling*/
 #swear {
 	margin-top:500px;
@@ -227,6 +255,14 @@ h2 {
 	.mischief {
 		font-size: 35px;
 	}
+	.win-slytherin {
+	left: 80px;
+	top: 600px;
+	}
+	.win-gryffindor {
+	left: 80px;
+	top: 600px;
+	}
 }
 
 @media (min-device-width: 1046px){
@@ -270,5 +306,15 @@ h2 {
 
 	.mischief {
 		font-size: 20px;
+	}
+
+	.win-slytherin {
+	left: 240px;
+	top: 250px;
+	}
+
+	.win-gryffindor {
+	left: 240px;
+	top: 250px;
 	}
 }
